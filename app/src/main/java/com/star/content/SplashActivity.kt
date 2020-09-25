@@ -24,7 +24,7 @@ class SplashActivity : AppCompatActivity() {
         }
 
         btn_game_with_id.setOnClickListener {
-            StarMedia.openStarGame(this, "{\"game_id\":10007}"){
+            StarMedia.openStarGame(this, "{\"game_id\":10007, \"menu\":false}"){
                 if(!it){
                     Toast.makeText(this, "开发游戏失败", Toast.LENGTH_LONG).show()
                 }
