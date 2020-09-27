@@ -11,7 +11,7 @@
     tools:ignore="HardcodedText">
 
     <TextView
-        android:id="@+id/tv_content_title"
+        android:id="@+id/tv_content_image_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ellipsize="end"
@@ -31,13 +31,14 @@
         android:layout_marginTop="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_content_title">
+        app:layout_constraintTop_toBottomOf="@id/tv_content_image_title">
 
         <ImageView
             android:id="@+id/iv_content_image"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:scaleType="centerCrop"
+            android:contentDescription="@string/app_name"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -55,6 +56,7 @@
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:layout_marginEnd="4dp"
+                android:contentDescription="@string/app_name"
                 android:src="@mipmap/star_content_image_count"
                 app:layout_constraintBottom_toBottomOf="@id/tv_content_image_count"
                 app:layout_constraintRight_toLeftOf="@id/tv_content_image_count"
@@ -74,7 +76,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/tv_content_source"
+        android:id="@+id/tv_content_image_source"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -86,29 +88,29 @@
         tools:text="人民日报" />
 
     <TextView
-        android:id="@+id/tv_content_read"
+        android:id="@+id/tv_content_image_read"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:includeFontPadding="false"
         android:textColor="#A7A9AE"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_content_source"
-        app:layout_constraintLeft_toRightOf="@id/tv_content_source"
-        app:layout_constraintTop_toTopOf="@id/tv_content_source"
+        app:layout_constraintBottom_toBottomOf="@id/tv_content_image_source"
+        app:layout_constraintLeft_toRightOf="@id/tv_content_image_source"
+        app:layout_constraintTop_toTopOf="@id/tv_content_image_source"
         tools:text="124阅读" />
 
     <TextView
-        android:id="@+id/tv_content_time"
+        android:id="@+id/tv_content_image_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:includeFontPadding="false"
         android:textColor="#A7A9AE"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_content_source"
-        app:layout_constraintLeft_toRightOf="@id/tv_content_read"
-        app:layout_constraintTop_toTopOf="@id/tv_content_source"
+        app:layout_constraintBottom_toBottomOf="@id/tv_content_image_source"
+        app:layout_constraintLeft_toRightOf="@id/tv_content_image_read"
+        app:layout_constraintTop_toTopOf="@id/tv_content_image_source"
         tools:text="10分钟前" />
 
     <View
@@ -116,5 +118,5 @@
         android:layout_height="0.5dp"
         android:layout_marginTop="12dp"
         android:background="#E6E6E6"
-        app:layout_constraintTop_toBottomOf="@id/tv_content_source" />
+        app:layout_constraintTop_toBottomOf="@id/tv_content_image_source" />
 </androidx.constraintlayout.widget.ConstraintLayout>

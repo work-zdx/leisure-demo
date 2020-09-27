@@ -1,4 +1,4 @@
-package com.star.content
+package com.star.content.service
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -12,6 +12,8 @@ import android.os.Build
 import android.os.IBinder
 import android.util.Log
 import androidx.core.app.NotificationCompat
+import com.star.content.receiver.LockBroadcastReceiver
+import com.star.content.R
 
 
 class BackgroundService : Service() {
@@ -20,7 +22,7 @@ class BackgroundService : Service() {
 
     private val channelId = 100
 
-    private var lockScreenBroadcastReceiver: LockScreenBroadcastReceiver? = null
+    private var lockBroadcastReceiver: LockBroadcastReceiver? = null
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Log.e(tag, "BackgroundService StartCommand")
@@ -45,14 +47,13 @@ class BackgroundService : Service() {
             startForeground(this.channelId, createNormalNotification())
         }
 
-        lockScreenBroadcastReceiver = LockScreenBroadcastReceiver()
+        lockBroadcastReceiver = LockBroadcastReceiver()
 
         val filter = IntentFilter()
         filter.addAction(Intent.ACTION_SCREEN_OFF)
         filter.addAction(Intent.ACTION_SCREEN_ON)
         filter.addAction(Intent.ACTION_USER_PRESENT)
-        registerReceiver(lockScreenBroadcastReceiver, filter)
-
+        registerReceiver(lockBroadcastReceiver, filter)
     }
 
     override fun onBind(intent: Intent?): IBinder? {
@@ -77,8 +78,8 @@ class BackgroundService : Service() {
         Log.e(tag, "BackgroundService Destroy")
         super.onDestroy()
 
-        if(lockScreenBroadcastReceiver != null){
-            unregisterReceiver(lockScreenBroadcastReceiver)
+        if(lockBroadcastReceiver != null){
+            unregisterReceiver(lockBroadcastReceiver)
         }
     }
 }

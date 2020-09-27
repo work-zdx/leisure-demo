@@ -27,18 +27,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"  android:screenOrientation="portrait"/>
+
+        <activity android:name=".FlowMainActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".FlowContentActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".FlowLockPromptActivity"  android:screenOrientation="portrait"/>
+
+        <activity android:name=".GameCenterActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".GameSingleActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".GameNativeActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".GameRewardActivity"  android:screenOrientation="portrait"/>
 
         <service
-            android:name=".BackgroundService"
+            android:name=".service.BackgroundService"
             android:process=":background" />
 
-        <activity android:name=".LockScreenActivity"
+        <activity android:name=".FlowLockActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:launchMode="singleInstance"
             android:taskAffinity="com.star.content.lock">
-
         </activity>
     </application>
-
 </manifest>

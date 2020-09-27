@@ -15,9 +15,7 @@ import androidx.multidex.MultiDexApplication
 import com.bun.miitmdid.core.JLibrary
 import com.bun.miitmdid.core.MdidSdkHelper
 import com.bytedance.sdk.openadsdk.*
-import com.starmedia.adsdk.AdRequest
-import com.starmedia.adsdk.IRewardedVideo
-import com.starmedia.adsdk.InnerRet
+import com.star.content.service.BackgroundService
 import com.starmedia.tinysdk.StarMedia
 
 class ContentApplication: MultiDexApplication() {

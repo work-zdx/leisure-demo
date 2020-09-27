@@ -11,24 +11,33 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-        btn_content.setOnClickListener{
-            startActivity(Intent(this, MainActivity::class.java))
+
+        bu_demo_flow_lock.setOnClickListener {
+            startActivity(Intent(this, FlowLockPromptActivity::class.java))
         }
 
-        btn_game.setOnClickListener {
-            StarMedia.openStarGame(this){
-                if(!it){
-                    Toast.makeText(this, "开发游戏失败", Toast.LENGTH_LONG).show()
-                }
-            }
+        bu_demo_flow_other.setOnClickListener {
+            startActivity(Intent(this, FlowContentActivity::class.java))
         }
 
-        btn_game_with_id.setOnClickListener {
-            StarMedia.openStarGame(this, "{\"game_id\":10007, \"menu\":false}"){
-                if(!it){
-                    Toast.makeText(this, "开发游戏失败", Toast.LENGTH_LONG).show()
-                }
-            }
+        bu_demo_flow_home.setOnClickListener {
+            startActivity(Intent(this, FlowMainActivity::class.java))
+        }
+
+        bu_demo_game_center.setOnClickListener {
+            startActivity(Intent(this, GameCenterActivity::class.java))
+        }
+
+        bu_demo_game_single.setOnClickListener {
+            startActivity(Intent(this, GameSingleActivity::class.java))
+        }
+
+        bu_demo_game_native.setOnClickListener {
+            startActivity(Intent(this, GameNativeActivity::class.java))
+        }
+
+        bu_demo_game_reward.setOnClickListener {
+            startActivity(Intent(this, GameRewardActivity::class.java))
         }
     }
 }
