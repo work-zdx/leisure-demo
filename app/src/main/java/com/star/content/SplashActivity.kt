@@ -39,5 +39,13 @@ class SplashActivity : AppCompatActivity() {
         bu_demo_game_reward.setOnClickListener {
             startActivity(Intent(this, GameRewardActivity::class.java))
         }
+
+        bu_demo_debug_start.setOnClickListener {
+            StarMedia.openStarGame(this, "{\"game_id\":${et_demo_debug_input.text}, \"menu\":false}") {
+                if (!it) {
+                    Toast.makeText(this, "开发游戏失败", Toast.LENGTH_LONG).show()
+                }
+            }
+        }
     }
 }

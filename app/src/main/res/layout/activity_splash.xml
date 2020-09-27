@@ -167,9 +167,12 @@
         android:layout_marginTop="8dp"
         android:hint="请输入访问链接"
         android:importantForAutofill="no"
-        android:inputType="text"
+        android:inputType="number"
         android:textColor="#212121"
         android:textColorHint="#757575"
+        android:numeric="integer"
+        android:singleLine="true"
+        android:maxLength="5"
         app:layout_constraintEnd_toStartOf="@id/bu_demo_debug_start"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_demo_debug" />
