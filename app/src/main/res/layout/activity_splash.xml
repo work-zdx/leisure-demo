@@ -4,42 +4,188 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.star.content.SplashActivity">
+    android:background="#FFFFFF"
+    tools:context="com.star.content.SplashActivity"
+    tools:ignore="HardcodedText">
 
-    <Button
-        android:id="@+id/btn_content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="Content Flow"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btn_game"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Game"
+    <TextView
+        android:id="@+id/tv_demo_title"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:text="网星休闲SDK演示Demo"
+        android:textColor="#212121"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_game_with_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="开心斗地主"
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F0F0F0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_game" />
+        app:layout_constraintTop_toBottomOf="@id/tv_demo_title" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+    <TextView
+        android:id="@+id/tv_demo_flow"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="1dp"
+        android:background="#FAFAFAFA"
+        android:gravity="center"
+        android:text="信息流应用"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_demo_title" />
+
+    <Button
+        android:id="@+id/bu_demo_flow_lock"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="锁屏信息流"
+        app:layout_constraintEnd_toStartOf="@id/bu_demo_flow_other"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_demo_flow" />
+
+    <Button
+        android:id="@+id/bu_demo_flow_other"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="主功能下方信息流"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bu_demo_flow_lock"
+        app:layout_constraintTop_toBottomOf="@id/tv_demo_flow" />
+
+    <Button
+        android:id="@+id/bu_demo_flow_home"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="信息流构建资讯首页（推荐）或资讯频道"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bu_demo_flow_lock" />
+
+    <TextView
+        android:id="@+id/tv_demo_game"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:background="#FAFAFAFA"
+        android:gravity="center"
+        android:text="小游戏应用"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bu_demo_flow_home" />
+
+    <Button
+        android:id="@+id/bu_demo_game_center"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="游戏中心入口"
+        app:layout_constraintEnd_toStartOf="@id/bu_demo_game_single"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_demo_game" />
+
+    <Button
+        android:id="@+id/bu_demo_game_single"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="单个游戏入口"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bu_demo_game_center"
+        app:layout_constraintTop_toBottomOf="@id/tv_demo_game" />
+
+    <Button
+        android:id="@+id/bu_demo_game_native"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="原生游戏频道"
+        app:layout_constraintEnd_toStartOf="@id/bu_demo_game_reward"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bu_demo_game_center" />
+
+    <Button
+        android:id="@+id/bu_demo_game_reward"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="激励视频演示"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bu_demo_game_native"
+        app:layout_constraintTop_toBottomOf="@id/bu_demo_game_center" />
+
+
+    <TextView
+        android:id="@+id/tv_demo_debug"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:background="#FAFAFAFA"
+        android:gravity="center"
+        android:text="调试应用"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bu_demo_game_native" />
+
+    <EditText
+        android:id="@+id/et_demo_debug_input"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="请输入访问链接"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColor="#212121"
+        android:textColorHint="#757575"
+        android:numeric="integer"
+        android:singleLine="true"
+        android:maxLength="5"
+        app:layout_constraintEnd_toStartOf="@id/bu_demo_debug_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_demo_debug" />
+
+    <Button
+        android:id="@+id/bu_demo_debug_start"
+        android:layout_width="72dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="18dp"
+        android:text="访问"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/et_demo_debug_input"
+        app:layout_constraintTop_toBottomOf="@id/tv_demo_debug" />
 </androidx.constraintlayout.widget.ConstraintLayout>

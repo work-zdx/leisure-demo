@@ -4,11 +4,13 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
 import com.google.android.material.tabs.TabLayout
-import kotlinx.android.synthetic.main.activity_main.*
+import com.star.content.fragment.ContentFragment
+import kotlinx.android.synthetic.main.activity_flow_main.*
 
-class MainActivity : BaseActivity() {
+class FlowMainActivity : BaseActivity() {
 
     val tabs = mapOf(
+            Pair("推荐", 1000),
         Pair("娱乐", 1001),
         Pair("体育", 1002),
         Pair("IT", 1004),
@@ -50,7 +52,7 @@ class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_flow_main)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeButtonEnabled(true)

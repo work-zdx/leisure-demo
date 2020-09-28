@@ -11,7 +11,7 @@
     tools:ignore="HardcodedText">
 
     <TextView
-        android:id="@+id/tv_content_title"
+        android:id="@+id/tv_content_video_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ellipsize="end"
@@ -31,7 +31,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_content_title">
+        app:layout_constraintTop_toBottomOf="@id/tv_content_video_title">
 
         <ImageView
             android:id="@+id/iv_content_video_picture"
@@ -70,7 +70,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/tv_content_source"
+        android:id="@+id/tv_content_video_source"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -90,12 +90,12 @@
         android:text="1.5万次播放"
         android:textColor="#A7A9AE"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_content_source"
-        app:layout_constraintLeft_toRightOf="@id/tv_content_source"
-        app:layout_constraintTop_toTopOf="@id/tv_content_source" />
+        app:layout_constraintBottom_toBottomOf="@id/tv_content_video_source"
+        app:layout_constraintLeft_toRightOf="@id/tv_content_video_source"
+        app:layout_constraintTop_toTopOf="@id/tv_content_video_source" />
 
     <TextView
-        android:id="@+id/tv_content_time"
+        android:id="@+id/tv_content_video_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -103,14 +103,14 @@
         android:text="10分钟前"
         android:textColor="#A7A9AE"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@id/tv_content_source"
+        app:layout_constraintBottom_toBottomOf="@id/tv_content_video_source"
         app:layout_constraintLeft_toRightOf="@id/tv_content_video_play_count"
-        app:layout_constraintTop_toTopOf="@id/tv_content_source" />
+        app:layout_constraintTop_toTopOf="@id/tv_content_video_source" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_marginTop="12dp"
         android:background="#E6E6E6"
-        app:layout_constraintTop_toBottomOf="@id/tv_content_source" />
+        app:layout_constraintTop_toBottomOf="@id/tv_content_video_source" />
 </androidx.constraintlayout.widget.ConstraintLayout>

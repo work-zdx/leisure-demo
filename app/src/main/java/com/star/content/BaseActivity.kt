@@ -3,6 +3,7 @@ package com.star.content
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
+import com.star.content.fragment.LoadingFragment
 
 open class BaseActivity : AppCompatActivity() {
 
