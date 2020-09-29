@@ -73,7 +73,7 @@
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/icon_game_10001"
+            android:src="@drawable/kxxnc_icon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

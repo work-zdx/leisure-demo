@@ -22,6 +22,9 @@
             android:orientation="vertical"
             android:paddingBottom="64dp">
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="72dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -33,11 +36,13 @@
                     android:layout_height="96dp"
                     android:layout_weight="1">
 
-                    <ImageView
+                    <TextView
+                        android:text="icon"
+                        android:gravity="center"
+                        android:background="@drawable/border_icon"
                         android:id="@+id/iv_other_title_1"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
-                        android:background="#2196F3"
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/icon_tab_first"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +53,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="测试"
+                        android:text="名称"
                         android:textColor="#212121"
                         android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -61,11 +66,13 @@
                     android:layout_height="96dp"
                     android:layout_weight="1">
 
-                    <ImageView
+                    <TextView
+                        android:text="icon"
+                        android:gravity="center"
+                        android:background="@drawable/border_icon"
                         android:id="@+id/iv_other_title_2"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
-                        android:background="#2196F3"
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/icon_tab_second"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -76,7 +83,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="测试"
+                        android:text="名称"
                         android:textColor="#212121"
                         android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -90,11 +97,13 @@
                     android:layout_height="96dp"
                     android:layout_weight="1">
 
-                    <ImageView
+                    <TextView
+                        android:text="icon"
+                        android:gravity="center"
+                        android:background="@drawable/border_icon"
                         android:id="@+id/iv_other_title_3"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
-                        android:background="#2196F3"
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/icon_tab_third"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -105,7 +114,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
-                        android:text="测试"
+                        android:text="名称"
                         android:textColor="#212121"
                         android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -124,7 +133,7 @@
                         android:layout_width="56dp"
                         android:layout_height="56dp"
                         android:contentDescription="@string/app_name"
-                        android:src="@drawable/icon_game_10001"
+                        android:src="@drawable/u113"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -134,7 +143,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="游戏中心"
-                        android:textColor="#212121"
+                        android:textColor="#ff0000"
                         android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -142,366 +151,58 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <Space
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="8dp"
-                android:background="#F6F6F6">
-
-                <View
-                    android:id="@+id/vi_information_preview"
-                    android:layout_width="4dp"
-                    android:layout_height="20dp"
-                    android:layout_marginStart="16dp"
-                    android:background="#FFA726"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="简短资讯"
-                    android:textColor="#212121"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/vi_information_preview"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_height="72dp"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_information_banner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginEnd="12dp">
-
-                <TextView
-                    android:id="@+id/tv_content_text_title"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:includeFontPadding="false"
-                    android:maxLines="2"
-                    android:text="31省区市新增1例本土确诊病例，3例境外输入疑似病例"
-                    android:textColor="#222222"
-                    android:textSize="16sp"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/tv_content_text_source"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:includeFontPadding="false"
-                    android:text="人民日报"
-                    android:textColor="#A7A9AE"
-                    android:textSize="12sp"
-                    app:layout_constraintLeft_toLeftOf="@id/tv_content_text_title"
-                    app:layout_constraintTop_toBottomOf="@id/tv_content_text_title" />
-
-                <TextView
-                    android:id="@+id/tv_content_text_read"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:includeFontPadding="false"
-                    android:textColor="#A7A9AE"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="@id/tv_content_text_source"
-                    app:layout_constraintLeft_toRightOf="@id/tv_content_text_source"
-                    app:layout_constraintTop_toTopOf="@id/tv_content_text_source"
-                    tools:text="124阅读" />
-
-                <TextView
-                    android:id="@+id/tv_content_text_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:includeFontPadding="false"
-                    android:text="10分钟前"
-                    android:textColor="#A7A9AE"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="@id/tv_content_text_source"
-                    app:layout_constraintLeft_toRightOf="@id/tv_content_text_read"
-                    app:layout_constraintTop_toTopOf="@id/tv_content_text_source" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_marginTop="14dp"
-                    android:background="#E6E6E6"
-                    app:layout_constraintTop_toBottomOf="@id/tv_content_text_source" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginEnd="12dp"
-                tools:ignore="HardcodedText">
-
-                <TextView
-                    android:id="@+id/tv_content_video_title"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:includeFontPadding="false"
-                    android:maxLines="2"
-                    android:text="31省区市新增1例本土确诊病例，3例境外输入疑似病例"
-                    android:textColor="#222222"
-                    android:textSize="16sp"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/cl_content_video_info"
-                    android:layout_width="0dp"
-                    android:layout_height="208dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_content_video_title">
-
-                    <ImageView
-                        android:id="@+id/iv_content_video_picture"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/icon_banner_five"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintLeft_toLeftOf="parent"
-                        app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageView
-                        android:id="@+id/iv_content_video_play"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@mipmap/star_content_video_play"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintLeft_toLeftOf="parent"
-                        app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/tv_video_duration"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:background="@drawable/star_content_video_duration"
-                        android:paddingStart="6dp"
-                        android:paddingEnd="6dp"
-                        android:text="03:20"
-                        android:textColor="#FFFFFF"
-                        android:textSize="12sp"
-                        app:layout_constraintBottom_toBottomOf="@id/iv_content_video_picture"
-                        app:layout_constraintRight_toRightOf="@id/iv_content_video_picture" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <TextView
-                    android:id="@+id/tv_content_video_source"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:includeFontPadding="false"
-                    android:text="人民日报"
-                    android:textColor="#A7A9AE"
-                    android:textSize="12sp"
-                    app:layout_constraintLeft_toLeftOf="@id/cl_content_video_info"
-                    app:layout_constraintTop_toBottomOf="@id/cl_content_video_info" />
-
-                <TextView
-                    android:id="@+id/tv_content_video_play_count"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:includeFontPadding="false"
-                    android:text="1.5万次播放"
-                    android:textColor="#A7A9AE"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="@id/tv_content_video_source"
-                    app:layout_constraintLeft_toRightOf="@id/tv_content_video_source"
-                    app:layout_constraintTop_toTopOf="@id/tv_content_video_source" />
-
-                <TextView
-                    android:id="@+id/tv_content_video_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:includeFontPadding="false"
-                    android:text="10分钟前"
-                    android:textColor="#A7A9AE"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="@id/tv_content_video_source"
-                    app:layout_constraintLeft_toRightOf="@id/tv_content_video_play_count"
-                    app:layout_constraintTop_toTopOf="@id/tv_content_video_source" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_marginTop="12dp"
-                    android:background="#E6E6E6"
-                    app:layout_constraintTop_toBottomOf="@id/tv_content_video_source" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginEnd="12dp"
-                tools:ignore="HardcodedText">
-
-                <TextView
-                    android:id="@+id/tv_content_image_title"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:includeFontPadding="false"
-                    android:maxLines="2"
-                    android:text="31省区市新增1例本土确诊病例，3例境外输入疑似病例"
-                    android:textColor="#222222"
-                    android:textSize="16sp"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/cl_content_image_info"
-                    android:layout_width="0dp"
-                    android:layout_height="208dp"
-                    android:layout_marginTop="8dp"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_content_image_title">
-
-                    <ImageView
-                        android:id="@+id/iv_content_image"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:contentDescription="@string/app_name"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/icon_banner_five"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintLeft_toLeftOf="parent"
-                        app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="5dp"
-                        app:layout_constraintBottom_toBottomOf="@id/iv_content_image"
-                        app:layout_constraintRight_toRightOf="@id/iv_content_image">
-
-                        <ImageView
-                            android:layout_width="16dp"
-                            android:layout_height="16dp"
-                            android:layout_marginEnd="4dp"
-                            android:contentDescription="@string/app_name"
-                            android:src="@mipmap/star_content_image_count"
-                            app:layout_constraintBottom_toBottomOf="@id/tv_content_image_count"
-                            app:layout_constraintRight_toLeftOf="@id/tv_content_image_count"
-                            app:layout_constraintTop_toTopOf="@id/tv_content_image_count" />
-
-                        <TextView
-                            android:id="@+id/tv_content_image_count"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="3"
-                            android:textColor="#FFFFFF"
-                            android:textSize="14sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintRight_toRightOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <TextView
-                    android:id="@+id/tv_content_image_source"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:includeFontPadding="false"
-                    android:textColor="#A7A9AE"
-                    android:textSize="12sp"
-                    app:layout_constraintLeft_toLeftOf="@id/cl_content_image_info"
-                    app:layout_constraintTop_toBottomOf="@id/cl_content_image_info"
-                    tools:text="人民日报" />
-
-                <TextView
-                    android:id="@+id/tv_content_image_read"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:includeFontPadding="false"
-                    android:textColor="#A7A9AE"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="@id/tv_content_image_source"
-                    app:layout_constraintLeft_toRightOf="@id/tv_content_image_source"
-                    app:layout_constraintTop_toTopOf="@id/tv_content_image_source"
-                    tools:text="124阅读" />
-
-                <TextView
-                    android:id="@+id/tv_content_image_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:includeFontPadding="false"
-                    android:textColor="#A7A9AE"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="@id/tv_content_image_source"
-                    app:layout_constraintLeft_toRightOf="@id/tv_content_image_read"
-                    app:layout_constraintTop_toTopOf="@id/tv_content_image_source"
-                    tools:text="10分钟前" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_marginTop="12dp"
-                    android:background="#E6E6E6"
-                    app:layout_constraintTop_toBottomOf="@id/tv_content_image_source" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
                 android:background="#F6F6F6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cl_content_video">
 
                 <View
-                    android:id="@+id/vi_action_preview"
+                    android:id="@+id/vi_banner_preview"
                     android:layout_width="4dp"
                     android:layout_height="20dp"
                     android:layout_marginStart="16dp"
                     android:background="#FFA726"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    android:id="@+id/txt_banner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="菜单列表"
+                    android:text="广告Banner"
                     android:textColor="#212121"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/vi_action_preview"
+                    app:layout_constraintStart_toEndOf="@id/vi_banner_preview"
                     app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/rv_information_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="20:6"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="32dp"
+                    android:orientation="horizontal"
+                    android:src="@drawable/u135"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_banner" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="72dp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -509,7 +210,7 @@
                 android:gravity="center_vertical"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:text="意见反馈"
+                android:text="菜单名称"
                 android:textColor="#212121"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -528,6 +229,23 @@
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:text="游戏中心"
+                android:textColor="#ff0000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:drawableEndCompat="@drawable/icon_action_arrow_forward" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="菜单名称"
                 android:textColor="#212121"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -544,7 +262,7 @@
                 android:gravity="center_vertical"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:text="权限设置"
+                android:text="菜单名称"
                 android:textColor="#212121"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -555,65 +273,19 @@
                 android:layout_height="1dp"
                 android:background="#F0F0F0" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:gravity="center_vertical"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:text="市场评分"
-                android:textColor="#212121"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:drawableEndCompat="@drawable/icon_action_arrow_forward" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#F0F0F0" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_information_banner"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:background="#F6F6F6"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cl_content_video">
-
-                <View
-                    android:id="@+id/vi_banner_preview"
-                    android:layout_width="4dp"
-                    android:layout_height="20dp"
-                    android:layout_marginStart="16dp"
-                    android:background="#FFA726"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="底部Banner"
-                    android:textColor="#212121"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/vi_banner_preview"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/rv_information_banner"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="32dp"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cl_information_banner" />
         </LinearLayout>
     </ScrollView>
+
+    <ImageView
+        android:id="@+id/img_float"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        android:src="@drawable/u113"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

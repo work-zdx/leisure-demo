@@ -21,6 +21,7 @@
 
     <View
         android:id="@+id/vi_banner_title"
+        android:visibility="gone"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:background="#80000000"
@@ -29,6 +30,7 @@
         app:layout_constraintStart_toStartOf="@id/iv_banner_logo" />
 
     <TextView
+        android:visibility="gone"
         android:id="@+id/tv_banner_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
