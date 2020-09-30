@@ -77,12 +77,12 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="XXOO"/>
+            android:text="频道名"/>
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="XXOO"/>
+            android:text="频道名"/>
         <Button
             android:id="@+id/btn_smallgame"
             android:layout_width="0dp"
@@ -94,12 +94,12 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="XXOO"/>
+            android:text="频道名"/>
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="XXOO"/>
+            android:text="频道名"/>
 
     </LinearLayout>
 
