@@ -23,9 +23,9 @@ class FlowLockActivity : BaseActivity() {
     lateinit var layoutManager: LinearLayoutManager
 
     private var params = HashMap<Long, List<Int>>().apply {
-        put(0, arrayListOf(1001, 1002, 1004, 1005, 1006, 1007, 1008, 1009, 1011, 1012))
-        put(1, arrayListOf(1001, 1002, 1004, 1005, 1006, 1007, 1008, 1009, 1011, 1012))
-        put(2, arrayListOf(1001, 1002, 1004, 1005, 1006, 1007, 1008, 1009, 1011, 1012))
+        put(0L, arrayListOf(1001, 1002, 1004, 1005, 1006, 1007, 1008, 1009, 1011, 1012))
+        put(1L, arrayListOf(1001, 1002, 1004, 1005, 1006, 1007, 1008, 1009, 1011, 1012))
+        put(2L, arrayListOf(1001, 1002, 1004, 1005, 1006, 1007, 1008, 1009, 1011, 1012))
     }
 
     val adapter: ContentAdapter by lazy {

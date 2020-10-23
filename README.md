@@ -59,16 +59,20 @@ StarMedia.init(application: Application, id: String)
 
 #### 获取信息流内容
 
+**需要注意，HashMap<Long, List<Int>>() key 为Long 类型，如果使用java接入， 需要注意 +L , 例如 0L， 1L， 2L**
+
 ```kotlin
 /**
 * @param params 频道分类属性 //key 的取值有: 0:新闻、1:图集、2:视频
 * value list 的item 的取值见类目编码
 * val params = HashMap<Long, List<Int>>()
-* params[0] = arrayListOf(1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009)
-* params[1] = arrayListOf(1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019)
-* params[2] = arrayListOf(1033, 1034, 1036, 1037, 1039, 1040, 1041, 1042)
+* params[0L] = arrayListOf(1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009)
+* params[1L] = arrayListOf(1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019)
+* params[2L] = arrayListOf(1033, 1034, 1036, 1037, 1039, 1040, 1041, 1042)
 * @param page 分页数据，每页 30条
 */
+
+
 StarMedia.loadContent(
 activity: Activity,
 params: Map<Long, List<Int>>,

@@ -53,13 +53,13 @@ class ContentFragment : Fragment() {
         val key = arguments?.getInt(KEY) ?: 9999
 
         if (key == 1000) {
-            params[0] = arrayListOf(1001, 1002, 1004, 1005, 1006, 1007, 1008, 1009, 1011, 1012)
-            params[1] = arrayListOf(1001, 1002, 1004, 1005, 1006, 1007, 1008, 1009, 1011, 1012)
-            params[2] = arrayListOf(1001, 1002, 1004, 1005, 1006, 1007, 1008, 1009, 1011, 1012)
+            params[0L] = arrayListOf(1001, 1002, 1004, 1005, 1006, 1007, 1008, 1009, 1011, 1012)
+            params[1L] = arrayListOf(1001, 1002, 1004, 1005, 1006, 1007, 1008, 1009, 1011, 1012)
+            params[2L] = arrayListOf(1001, 1002, 1004, 1005, 1006, 1007, 1008, 1009, 1011, 1012)
         } else {
-            params[0] = arrayListOf(key) //新闻
-            params[1] = arrayListOf(key) //图集
-            params[2] = arrayListOf(key) //视频
+            params[0L] = arrayListOf(key) //新闻
+            params[1L] = arrayListOf(key) //图集
+            params[2L] = arrayListOf(key) //视频
         }
 
         layoutManager = LinearLayoutManager(requireContext())
